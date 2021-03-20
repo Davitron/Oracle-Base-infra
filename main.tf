@@ -3,20 +3,19 @@ provider "oci" {
   user_ocid        = var.user_ocid
   fingerprint      = var.fingerprint
   private_key =    var.private_key
-  private_key_password = "Password@123"
   region           = var.region
 }
 
-terraform {
-  backend "remote" {
-    hostname  = "app.terraform.io"
-    organization = "Innovectives"
+# terraform {
+#   backend "remote" {
+#     hostname  = "app.terraform.io"
+#     organization = "Innovectives"
 
-    workspaces {
-      name = "Oracle-Base-infra-test"
-    }
-  }
-}
+#     workspaces {
+#       name = "Oracle-Base-infra-test"
+#     }
+#   }
+# }
 
 
 module "network" {

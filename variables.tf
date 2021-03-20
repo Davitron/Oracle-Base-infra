@@ -15,7 +15,7 @@ variable "private_key" {
 }
 
 variable "region" {
-  default = "eu-frankfurt-1"
+  type  = string
 }
 
 # variable "compartment_name" {
@@ -23,13 +23,13 @@ variable "region" {
 # }
 
 variable "vcn_cidr_block" {
-  default = "10.0.0.0/16"
+  type  = string
 }
 
 variable "public_subnet_cidr" {
-  default = "10.0.0.0/17"
+  type  = string
 }
 
 variable "private_subnet_cidr" {
-  default = "10.0.128.0/17"
+  type  = string
 }
